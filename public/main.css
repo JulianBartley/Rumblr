@@ -1,0 +1,244 @@
+body {
+  margin: 0;
+
+}
+
+.WholeSite {
+  background-image: url('https://afar-production.imgix.net/uploads/images/afar_post_headers/images/hMgp5KhvDm/original_norway-northern-lights-lofoten-aurora.jpg');
+  height: 100vh;
+}
+
+.title {
+  padding: 10% 25%;
+}
+
+h1 {
+  font-size: 9em;
+  font-family: 'Nunito Sans', sans-serif;
+  color: white;
+  margin-bottom: -.02%;
+  font-weight: bold;
+  letter-spacing: 4.4px;
+}
+
+h2 {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 1.5em;
+  color: white;
+}
+
+#getStarted {
+  font-size: 3em;
+  color: white;
+  padding: 2.5% 15%;
+  border-radius: 12px;
+  background-color: rgb(0, 186, 249);
+  transition: transform .2s;
+
+}
+
+#getStarted:hover,
+#login:hover,
+#loginPage2:hover{
+  transform: scale(1.1);
+}
+
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: absolute;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding: 23.8% 2%;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: white;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.form {
+  width: 100%;
+  padding: 11px 10px 11px 13px;
+  display: block;
+  margin: 0;
+  border: none;
+  background: none;
+  font: 20px/1.4 "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+#login {
+  font-size: 3em;
+  padding: 2.5% 22.4%;
+  margin-top: 2%;
+  border-radius: 12px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(93, 93, 93);
+  transition: transform .2s;
+
+}
+
+main {
+  height: 100vh;
+}
+
+.content {
+  display: grid;
+  grid-template:
+    'bio '
+    'signup';
+}
+
+#bio {
+  grid-area: 'bio';
+  height: 70vh;
+}
+
+#biography {
+  padding: 20%;
+  font-size: 1.6em;
+  font-family: 'Noto Sans KR', sans-serif;
+  text-align: center;
+  background-color: rgb(249,237,211);
+
+}
+
+#signup {
+  grid-area: 'signup';
+  height: 30vh;
+  align-items: center;
+
+}
+
+.button2{
+  margin: 10% 29.5%;
+
+}
+
+
+.WholeLoginPage{
+  height: 100vh;
+  background-image: url('https://images4.alphacoders.com/927/927562.jpg');
+}
+
+
+
+form{
+    padding: 20% 25%;
+}
+
+.loginPage{
+  width: 100%;
+  padding: 11px 10px 11px 13px;
+  display: block;
+  border: none;
+  background: none;
+  font: 30px/1.4 "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+#loginPage2{
+  font-weight: bold;
+  color: white;
+  transition: transform .2s;
+}
+
+#loginPage2:hover{
+  color: rgb(42,186,249);
+}
+
+.SocialPageLayout{
+  display: grid;
+  grid-template-areas:
+  "banner banner banner"
+  "main main main"
+  "main main main"
+  "main main main"
+  "footing footing footing";
+}
+
+#banner{
+  grid-area: banner;
+  position: static;
+  /* padding: 2%; */
+  background-color: rgb(246,53,44);
+  box-shadow: 0px 10px 5px 0px;
+  border: 1px solid;
+}
+
+#SocialName{
+  position: static;
+  padding: 0% 0% 0% 65%;
+  z-index: 1
+}
+
+#main{
+  grid-area: main;
+  overflow-y: scroll;
+  height: 90vh;
+  display: grid;
+  grid-template-areas:
+  "iconImage pageContent"
+  "iconImage pageContent"
+  ". pageContent";
+}
+
+#iconImage{
+  grid-area: iconImage;
+  /* background: blue; */
+  box-sizing: border-box;
+  height: 80vh;
+  width: 30vw;
+}
+
+#avatar{
+  border-radius: 50%;
+  position: relative;
+  padding: 18%;
+}
+
+#pageContent{
+  grid-area: pageContent;
+  height: 110vh;
+  width: 70vw;
+  background: pink;
+  overflow-y: scroll;
+}
+
+#footing{
+  grid-area: footing;
+}
