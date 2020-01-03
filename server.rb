@@ -22,9 +22,10 @@ get "/signup" do
 end
 
 post "/signup" do
-  @user = User.new(params)
+  @user = User.new(params[:user])
   if @user.save
     p "#{@user.first_name} is now in Rumblr."
+    redirect %(/profile/#{@user.id})
   end
     erb :home
 end
@@ -35,14 +36,24 @@ get "/login" do
 end
 
 post '/login' do
-    user = User.find_by(email: params[:email])
+    @user = User.find_by(email: params[:email])
     given_password = params[:password]
-    if user.password == given_password
-        session[:user_id] = user.id
-        redirect '/social'
-    end
+    if @user.password == given_password
+        session[:user_id] = @user.id
+        redirect %(/social/#{@user.id})
+      end
 end
 
-get '/social' do
+get '/social/:id' do
+  @user = User.find(params[:id])
   erb :social
+rescue ActiveRecord::RecordNotFound
+  puts "error14"
+  erb :home
 end
+
+post '/logout' do 
+  session.clear
+  p "User Logged out Successfully"
+  redirect '/login'
+end 

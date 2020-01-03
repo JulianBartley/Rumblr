@@ -43,6 +43,8 @@ h2 {
   transform: scale(1.1);
 }
 
+
+
 .modal {
   display: none;
   /* Hidden by default */
@@ -50,7 +52,7 @@ h2 {
   /* Stay in place */
   z-index: 1;
   /* Sit on top */
-  padding: 23.8% 2%;
+  padding: 15.8% 2%;
   /* Location of the box */
   left: 0;
   top: 0;
@@ -155,6 +157,9 @@ main {
   background-image: url('https://images4.alphacoders.com/927/927562.jpg');
 }
 
+.loginpage{
+  background-color: white;
+}
 
 
 form{
@@ -198,12 +203,20 @@ form{
   background-color: rgb(246,53,44);
   box-shadow: 0px 10px 5px 0px;
   border: 1px solid;
+  display: grid;
+  grid-template-areas:
+  "SocialName Rlogo"
+  "SocialName Rlogo";
+
 }
 
+#Rlogo{
+  grid-area: Rlogo;
+
+}
 #SocialName{
-  position: static;
-  padding: 0% 0% 0% 65%;
-  z-index: 1
+  grid-area: Socialname;
+  
 }
 
 #main{
@@ -219,7 +232,6 @@ form{
 
 #iconImage{
   grid-area: iconImage;
-  /* background: blue; */
   box-sizing: border-box;
   height: 80vh;
   width: 30vw;
